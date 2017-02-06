@@ -1,1 +1,99 @@
+body {
+  font-family: helvetica;
+  text-align: center;
+  background: -webkit-linear-gradient(bottom, #4ECDC4, #556270);
+  background: -o-linear-gradient(bottom, #4ECDC4, #556270);
+  background: linear-gradient(to top, #4ECDC4, #556270);
+}
 
+iframe {
+  width: 240px;
+  height: 155px;
+  border: 0;
+  background-color: rgb(240, 240, 240);
+}
+
+header {
+  width: 75vw;
+  background-color: rgb(35, 35, 35);
+  border-radius: 20px 20px 0 0;
+  text-align: left;
+  top: 70px;
+  margin: 0px auto;
+  margin-top: 40px;
+  padding-bottom: 40px;
+}
+
+header.affix {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 100;
+  border-radius: 0;
+  padding-bottom: 40px;
+}
+
+h1 {
+  letter-spacing: 0.2em;
+  font-size: 4em;
+  font-weight: 400;
+  color: #4ECDC4;
+  margin-top: 0;
+  padding-top: 30px;
+  padding-left: 40px;
+}
+
+button {
+  height: 33px;
+  width: 85px;
+  display: inline-block;
+  margin: 0;
+  border: 0;
+  vertical-align: top;
+  border-radius: 0 3px 3px 0;
+  font-size: 17px;
+  color: rgb(65, 65, 65);
+}
+
+input {
+  height: 30px;
+  width: 250px;
+  display: inline-block;
+  border: 0;
+  margin: 0;
+  vertical-align: top;
+  border-radius: 3px 0 0 3px;
+  font-size: 20px;
+  color: rgb(65, 65, 65);
+  margin-left: 40px;
+}
+
+input:focus {
+  outline: 0;
+}
+
+input[type="text"] {
+  padding-left: 8px;
+}
+
+.list {
+  width: 75vw;
+  margin: 0 auto;
+  padding-top: 50px;
+  background-color: rgb(35, 35, 35);
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.list-scroll {
+  margin-top: 216.5px;
+}
+
+.gif {
+  margin: 15px;
+  overflow: scroll;
+}
