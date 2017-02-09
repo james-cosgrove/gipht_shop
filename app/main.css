@@ -1,49 +1,103 @@
 body {
   font-family: helvetica;
   text-align: center;
-  background: #C02425; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top, #C02425 , #F0CB35); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to top, #C02425 , #F0CB35); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  margin: 0;
+  background-color: black;
 }
 
 iframe {
   width: 240px;
   height: 155px;
-  border: 0;
-  background-color: rgb(240, 240, 240);
+  border: 5px solid #01ABAA;
+  border-radius: 5px;
+  background-color: #black;
 }
 
 header {
-  width: 75vw;
-  background-color: rgb(35, 35, 35);
-  border-radius: 20px 20px 0 0;
+  width: 77.6vw;
+  background-color: #FEDC3D;
+  border-radius: 0 0 10px 10px;
   text-align: left;
-  top: 70px;
-  margin: 0px auto;
-  margin-top: 40px;
-  padding-bottom: 40px;
-}
-
-header.affix {
-  position: fixed;
-  top: 0;
   left: 0;
   right: 0;
-  margin: 0 auto;
-  z-index: 100;
-  border-radius: 0;
+  margin-left: auto;
+  margin-right: auto;
   padding-bottom: 40px;
+  max-height: 140px;
+  position: fixed;
+  -webkit-transition: all ease-in-out 0.5s;
+  -moz-transition: all ease-in-out 0.5s;
+  -ms-transition: all ease-in-out 0.5s;
+  -o-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
 }
+
+header.shrink {
+  padding-bottom: 20px;
+  max-height: 50px;
+  -webkit-transition: all ease-in-out 0.5s;
+  -moz-transition: all ease-in-out 0.5s;
+  -ms-transition: all ease-in-out 0.5s;
+  -o-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+}
+
+header.shrink button,
+header.shrink input {
+  opacity: 0;
+  -webkit-transition: all ease-in-out 0.3s;
+  -moz-transition: all ease-in-out 0.3s;
+  -ms-transition: all ease-in-out 0.3s;
+  -o-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+}
+
+header.shrink h1 {
+  font-size: 2rem;
+  -webkit-transition: all ease-in-out 0.5s;
+  -moz-transition: all ease-in-out 0.5s;
+  -ms-transition: all ease-in-out 0.5s;
+  -o-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+}
+
+/*#header-container {
+  -webkit-transition: all 0.5s ease-in;
+  -webkit-transform: scale(1);
+  -ms-transition: all 0.5s ease-in;
+  -ms-transform: scale(1);
+  -moz-transition: all 0.5s ease-in;
+  -moz-transform: scale(1);
+  transition: all 0.5s ease-in;
+  transform: scale(1);
+}
+
+#header-container.shrink {
+  -webkit-transition: all 0.5s ease-in;
+  -webkit-transform: scale(0.7);
+  -ms-transition: all 0.5s ease-in;
+  -ms-transform: scale(0.7);
+  -moz-transition: all 0.5s ease-in;
+  -moz-transform: scale(0.7);
+  transition: all 0.5s ease-in;
+  transform: scale(0.7);
+}*/
 
 h1 {
   letter-spacing: 0.2em;
-  font-size: 4em;
+  font-size: 4rem;
   font-weight: 400;
-  color: #4ECDC4;
-  margin-top: 0;
-  padding-top: 30px;
+  color: #01ABAA;
+  margin-top: 15px;
   padding-left: 40px;
+  max-height: 74px;
+  margin-bottom: 15px;
+  width: auto;
+  -webkit-transition: all ease-in-out 0.5s;
+  -moz-transition: all ease-in-out 0.5s;
+  -ms-transition: all ease-in-out 0.5s;
+  -o-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
 }
 
 button {
@@ -56,6 +110,12 @@ button {
   border-radius: 0 3px 3px 0;
   font-size: 17px;
   color: rgb(65, 65, 65);
+  opacity: 1;
+  -webkit-transition: all ease-in-out 0.5s;
+  -moz-transition: all ease-in-out 0.5s;
+  -ms-transition: all ease-in-out 0.5s;
+  -o-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
 }
 
 input {
@@ -69,6 +129,12 @@ input {
   font-size: 20px;
   color: rgb(65, 65, 65);
   margin-left: 40px;
+  opacity: 1;
+  -webkit-transition: all ease-in-out 0.5s;
+  -moz-transition: all ease-in-out 0.5s;
+  -ms-transition: all ease-in-out 0.5s;
+  -o-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
 }
 
 input:focus {
@@ -80,21 +146,16 @@ input[type="text"] {
 }
 
 .list {
-  width: 75vw;
+  width: 80vw;
   margin: 0 auto;
-  padding-top: 50px;
-  background-color: rgb(35, 35, 35);
+  padding-top: 200px;
   display: flex;
   flex-flow: row;
   flex-wrap: wrap;
-  justify-content: space-around;
-}
-
-.list-scroll {
-  margin-top: 216.5px;
+  justify-content: space-between;
 }
 
 .gif {
-  margin: 15px;
   overflow: scroll;
+  margin: 15px;
 }

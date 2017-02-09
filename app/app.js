@@ -69,7 +69,7 @@ var getMore = function() {
 
 };
 
-// event listener
+// event listeners
 window.onload = trendingGifs();
 $('body').on('scroll', getMore);
 $('button').on('click', gifSearch);
@@ -84,17 +84,14 @@ $(window).scroll(function () {
    }
 });
 
-// fixes header to top of screen on scroll
+// fixes header to top of screen on scroll and add's class's to header and h1 to enable shrinking header on scroll
 $(window).scroll(function () {
-  var distanceY = window.pageYOffset || document.documentElement.scrollTop;
-  var distanceZ = 35;
-  if (distanceY > distanceZ) {
-    $('header').addClass("affix");
-    $('#list').addClass("list-scroll");
+  var distanceX = window.pageYOffset || document.documentElement.scrollTop;
+  var distanceY = 30;
+  if (distanceX > distanceY) {
+    $('header').addClass("shrink");
   } else {
-    $('header').hasClass("affix");
-    $('header').removeClass("affix");
-    $('#list').hasClass("list-scroll");
-    $('#list').removeClass("list-scroll");
+    $('header').hasClass("shrink");
+    $('header').removeClass("shrink");
   }
 });
