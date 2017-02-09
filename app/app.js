@@ -87,7 +87,7 @@ $(window).scroll(function () {
 // fixes header to top of screen on scroll and add's class's to header and h1 to enable shrinking header on scroll
 $(window).scroll(function () {
   var distanceX = window.pageYOffset || document.documentElement.scrollTop;
-  var distanceY = 30;
+  var distanceY = 120;
   if (distanceX > distanceY) {
     $('header').addClass("shrink");
   } else {
