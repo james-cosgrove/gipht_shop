@@ -1,17 +1,20 @@
 var express = require('express');
 var path = require('path');
-var app = express();
+var server = express();
 
-const PORT = 3000;
+// const PORT = 3000;
+var port_number = server.listen(process.env.PORT || 3000);
 
-app.set('views', './');
-app.set('view engine', 'ejs');
-app.use(express.static(path.join(__dirname, 'app')));
+server.set('views', './');
+server.set('view engine', 'ejs');
+server.use(express.static(path.join(__dirname, 'app')));
 
-app.get('/', function(request, response) {
+server.get('/', function(request, response) {
   response.render('index');
 });
 
-app.listen(PORT, function() {
-  console.log(`Example app listening on port ${PORT}`);
-});
+// server.listen(PORT, function() {
+//   console.log(`Example app listening on port ${PORT}`);
+// });
+
+server.listen(port_number);
