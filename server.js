@@ -5,7 +5,7 @@ const PORT = 3000;
 app.set('views', './views');
 app.set('view engine', 'ejs');
 
-app.get('/about', function(request, response) {
+app.get('/', function(request, response) {
   response.render('index');
 });
 
