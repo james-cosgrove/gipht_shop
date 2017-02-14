@@ -1,11 +1,14 @@
-var app = require('express')();
+var express = require('express');
+var path = require('path');
+var app = express();
 
 const PORT = 3000;
 
-app.set('views', './views');
+app.set('views', './');
 app.set('view engine', 'ejs');
+app.use(express.static(path.join(__dirname, 'app')));
 
-app.post('/', function(request, response) {
+app.get('/', function(request, response) {
   response.render('index');
 });
 
