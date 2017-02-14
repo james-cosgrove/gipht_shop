@@ -3,7 +3,7 @@ var count = 0;
 
 var trendingGifs = function() {
   var settings = {
-    url: 'http://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC',
+    url: 'https://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC',
     method: 'get',
     dataType: 'json',
   }
@@ -24,7 +24,7 @@ var gifSearch = function() {
   var gif = $('#search').val();
   if (gif !== '') {
     var settings = {
-      url: 'http://api.giphy.com/v1/gifs/search?q=&api_key=dc6zaTOxFJmzC&limit=12&offset=0',
+      url: 'https://api.giphy.com/v1/gifs/search?q=&api_key=dc6zaTOxFJmzC&limit=12&offset=0',
       method: 'get',
       dataType: 'json',
       data: { q: gif }
@@ -49,7 +49,7 @@ var gifSearch = function() {
 var getMore = function() {
   var gif = $('#search').val();
   var settings = {
-    url: 'http://api.giphy.com/v1/gifs/search?q=&api_key=dc6zaTOxFJmzC&limit=12&offset=' + count,
+    url: 'https://api.giphy.com/v1/gifs/search?q=&api_key=dc6zaTOxFJmzC&limit=12&offset=' + count,
     method: 'get',
     dataType: 'json',
     data: { q: gif }
